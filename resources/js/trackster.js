@@ -53,14 +53,14 @@ Trackster.renderTracks = () =>
   {
     $(".search-results").empty();
     console.log('renderTracks running!');
-    for (i = 0; i < jsonData.results.trackmatches.track.length; i++)
+    for (let i = 0; i < jsonData.results.trackmatches.track.length; i++)
       {
         searchContainer.innerHTML +=
         `<div class="row row-results container-fluid">
         <div class="col-xs-offset-1 col-xs-1 play-icon fa fa-play-circle-o fa-2x"></div>
         <div class="col-xs-4 song">${jsonData.results.trackmatches.track[i].name}</div>
         <div class="col-xs-2 artist">${jsonData.results.trackmatches.track[i].artist}</div>
-        <div class="col-xs-2 artwork"><img src=${jsonData.results.trackmatches.track[i].image[1]["#text"]}></div>
+        <div class="col-xs-2 artwork"><img src="${jsonData.results.trackmatches.track[i].image[1]["#text"]}"></div>
         <div class="col-xs-2 listeners">${numeral(jsonData.results.trackmatches.track[i].listeners).format('0,0')}</div>
         </div>`
       }
@@ -125,61 +125,61 @@ barLoading = () =>
     }
 };
 
-sortSongName = () =>
-{
-  directionIndex.name *= -1;
-  jsonData.results.trackmatches.track.sort(function(a, b)
-  {
-      let nameA = a.name.toUpperCase(); // ignore upper and lowercase
-      let nameB = b.name.toUpperCase(); // ignore upper and lowercase
-      if (nameA < nameB)
-      {
-        return -1*directionIndex.name;
-      }
-      if (nameA > nameB)
-      {
-        return 1*directionIndex.name;
-      }
-
-    // names must be equal
-        return 0;
-  });
-  console.log(jsonData.results.trackmatches.track);
-  Trackster.renderTracks();
-}
-
-sortSongArtist = () =>
-{
-  directionIndex.artist *= -1
-  jsonData.results.trackmatches.track.sort(function(a, b)
-  {
-      let nameA = a.artist.toUpperCase(); // ignore upper and lowercase
-      let nameB = b.artist.toUpperCase(); // ignore upper and lowercase
-      if (nameA < nameB)
-      {
-        return -1*directionIndex.artist;
-      }
-      if (nameA > nameB)
-      {
-        return 1*directionIndex.artist;
-      }
-
-    // names must be equal
-        return 0;
-  });
-  console.log(jsonData.results.trackmatches.track);
-  Trackster.renderTracks();
-}
-
-sortSongListeners = () =>
-{
-  directionIndex.listeners *= -1
-  jsonData.results.trackmatches.track.sort(function (a, b) {
-  return (a.listeners - b.listeners)*directionIndex.listeners;
-  });
-  console.log(jsonData.results.trackmatches.track);
-  Trackster.renderTracks();
-}
+// sortSongName = () =>
+// {
+//   directionIndex.name *= -1;
+//   jsonData.results.trackmatches.track.sort(function(a, b)
+//   {
+//       let nameA = a.name.toUpperCase(); // ignore upper and lowercase
+//       let nameB = b.name.toUpperCase(); // ignore upper and lowercase
+//       if (nameA < nameB)
+//       {
+//         return -1*directionIndex.name;
+//       }
+//       if (nameA > nameB)
+//       {
+//         return 1*directionIndex.name;
+//       }
+//
+//     // names must be equal
+//         return 0;
+//   });
+//   console.log(jsonData.results.trackmatches.track);
+//   Trackster.renderTracks();
+// }
+//
+// sortSongArtist = () =>
+// {
+//   directionIndex.artist *= -1
+//   jsonData.results.trackmatches.track.sort(function(a, b)
+//   {
+//       let nameA = a.artist.toUpperCase(); // ignore upper and lowercase
+//       let nameB = b.artist.toUpperCase(); // ignore upper and lowercase
+//       if (nameA < nameB)
+//       {
+//         return -1*directionIndex.artist;
+//       }
+//       if (nameA > nameB)
+//       {
+//         return 1*directionIndex.artist;
+//       }
+//
+//     // names must be equal
+//         return 0;
+//   });
+//   console.log(jsonData.results.trackmatches.track);
+//   Trackster.renderTracks();
+// }
+//
+// sortSongListeners = () =>
+// {
+//   directionIndex.listeners *= -1
+//   jsonData.results.trackmatches.track.sort(function (a, b) {
+//   return (a.listeners - b.listeners)*directionIndex.listeners;
+//   });
+//   console.log(jsonData.results.trackmatches.track);
+//   Trackster.renderTracks();
+// }
 
 
 
