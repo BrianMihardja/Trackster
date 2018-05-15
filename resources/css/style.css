@@ -17,6 +17,14 @@ html{
   margin-bottom: 0;
 }
 
+
+.loading-bar{
+  background-color: rgb(255,0,171);
+  height: 10px;
+  width: 0px;
+  border-radius: 5px;
+}
+
 .header-container button{
   background-color: rgb(255,102,204);
   height: 44px;
@@ -28,6 +36,7 @@ html{
 .header{
   padding: 44px 0;
 }
+
 
 .search-box{
   height: 44px;
@@ -44,6 +53,10 @@ html{
   color: white;
   font-size: 1rem;
   line-height: 35px;
+}
+
+.attrchild{
+  width: fit-content;
 }
 
   /* Results */
