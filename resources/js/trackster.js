@@ -60,7 +60,7 @@ Trackster.renderTracks = () =>
         <div class="col-xs-offset-1 col-xs-1 play-icon fa fa-play-circle-o fa-2x"></div>
         <div class="col-xs-4 song">${jsonData.results.trackmatches.track[i].name}</div>
         <div class="col-xs-2 artist">${jsonData.results.trackmatches.track[i].artist}</div>
-        <div class="col-xs-2 artwork"><img src="${jsonData.results.trackmatches.track[i].image[1]["#text"]}"></div>
+        <div class="col-xs-2 artwork"><img src=${jsonData.results.trackmatches.track[i].image[1]["#text"]}></div>
         <div class="col-xs-2 listeners">${numeral(jsonData.results.trackmatches.track[i].listeners).format('0,0')}</div>
         </div>`
       }
