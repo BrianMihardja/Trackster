@@ -125,61 +125,61 @@ barLoading = () =>
     }
 };
 
-// sortSongName = () =>
-// {
-//   directionIndex.name *= -1;
-//   jsonData.results.trackmatches.track.sort(function(a, b)
-//   {
-//       let nameA = a.name.toUpperCase(); // ignore upper and lowercase
-//       let nameB = b.name.toUpperCase(); // ignore upper and lowercase
-//       if (nameA < nameB)
-//       {
-//         return -1*directionIndex.name;
-//       }
-//       if (nameA > nameB)
-//       {
-//         return 1*directionIndex.name;
-//       }
-//
-//     // names must be equal
-//         return 0;
-//   });
-//   console.log(jsonData.results.trackmatches.track);
-//   Trackster.renderTracks();
-// }
-//
-// sortSongArtist = () =>
-// {
-//   directionIndex.artist *= -1
-//   jsonData.results.trackmatches.track.sort(function(a, b)
-//   {
-//       let nameA = a.artist.toUpperCase(); // ignore upper and lowercase
-//       let nameB = b.artist.toUpperCase(); // ignore upper and lowercase
-//       if (nameA < nameB)
-//       {
-//         return -1*directionIndex.artist;
-//       }
-//       if (nameA > nameB)
-//       {
-//         return 1*directionIndex.artist;
-//       }
-//
-//     // names must be equal
-//         return 0;
-//   });
-//   console.log(jsonData.results.trackmatches.track);
-//   Trackster.renderTracks();
-// }
-//
-// sortSongListeners = () =>
-// {
-//   directionIndex.listeners *= -1
-//   jsonData.results.trackmatches.track.sort(function (a, b) {
-//   return (a.listeners - b.listeners)*directionIndex.listeners;
-//   });
-//   console.log(jsonData.results.trackmatches.track);
-//   Trackster.renderTracks();
-// }
+sortSongName = () =>
+{
+  directionIndex.name *= -1;
+  jsonData.results.trackmatches.track.sort(function(a, b)
+  {
+      let nameA = a.name.toUpperCase(); // ignore upper and lowercase
+      let nameB = b.name.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB)
+      {
+        return -1*directionIndex.name;
+      }
+      if (nameA > nameB)
+      {
+        return 1*directionIndex.name;
+      }
+
+    // names must be equal
+        return 0;
+  });
+  console.log(jsonData.results.trackmatches.track);
+  Trackster.renderTracks();
+}
+
+sortSongArtist = () =>
+{
+  directionIndex.artist *= -1
+  jsonData.results.trackmatches.track.sort(function(a, b)
+  {
+      let nameA = a.artist.toUpperCase(); // ignore upper and lowercase
+      let nameB = b.artist.toUpperCase(); // ignore upper and lowercase
+      if (nameA < nameB)
+      {
+        return -1*directionIndex.artist;
+      }
+      if (nameA > nameB)
+      {
+        return 1*directionIndex.artist;
+      }
+
+    // names must be equal
+        return 0;
+  });
+  console.log(jsonData.results.trackmatches.track);
+  Trackster.renderTracks();
+}
+
+sortSongListeners = () =>
+{
+  directionIndex.listeners *= -1
+  jsonData.results.trackmatches.track.sort(function (a, b) {
+  return (a.listeners - b.listeners)*directionIndex.listeners;
+  });
+  console.log(jsonData.results.trackmatches.track);
+  Trackster.renderTracks();
+}
 
 
 
