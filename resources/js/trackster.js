@@ -63,7 +63,7 @@ Trackster.searchTracksByTitle = () =>
       console.log(`Search value: ${searchText[0].value}`);
 
     searchText.value = searchText.replace = (" ","_")
-    let urlAPI = `http://ws.audioscrobbler.com/2.0/?method=track.search&track=${searchText[0].value}&api_key=231efc6df67505c4ed19a8d69c779496&format=json`
+    let urlAPI = `https://ws.audioscrobbler.com/2.0/?method=track.search&track=${searchText[0].value}&api_key=231efc6df67505c4ed19a8d69c779496&format=json`
 
     xhr.onreadystatechange = function()
     {
